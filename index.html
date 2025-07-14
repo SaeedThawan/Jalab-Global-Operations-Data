@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إضافة سجل زيارة - Jalab Global Operations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            direction: rtl; /* للغة العربية */
+            text-align: right; /* للغة العربية */
+        }
+        .container {
+            background-color: #fff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="date"],
+        input[type="time"],
+        textarea,
+        select { /* أضفنا select هنا */
+            width: calc(100% - 20px);
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 18px;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #responseMessage {
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 4px;
+            text-align: center;
+            font-weight: bold;
+            display: none; /* مخفي في البداية */
+        }
+        .success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>إضافة سجل زيارة</h2>
+        <form id="visitLogForm">
+            <div class="form-group">
+                <label for="customerId">العميل:</label>
+                <select id="customerId" required>
+                    <option value="">جارٍ التحميل...</option> 
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="salesRepId">مندوب المبيعات:</label>
+                <select id="salesRepId" required>
+                    <option value="">جارٍ التحميل...</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="visitDate">تاريخ الزيارة:</label>
+                <input type="date" id="visitDate" required>
+            </div>
+            <div class="form-group">
+                <label for="visitTime">وقت الزيارة:</label>
+                <input type="time" id="visitTime" required>
+            </div>
+            <div class="form-group">
+                <label for="visitPurpose">الغرض من الزيارة:</label>
+                <input type="text" id="visitPurpose" required>
+            </div>
+            <div class="form-group">
+                <label for="visitOutcome">نتائج الزيارة:</label>
+                <textarea id="visitOutcome" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="nextVisitDate">تاريخ الزيارة التالية (اختياري):</label>
+                <input type="date" id="nextVisitDate">
+            </div>
+            <div class="form-group">
+                <label for="notes">ملاحظات (اختياري):</label>
+                <textarea id="notes"></textarea>
+            </div>
+            <button type="submit">إضافة سجل الزيارة</button>
+        </form>
+        <div id="responseMessage"></div>
+    </div>
+
+    <script src="script.js"></script>
+    </body>
+</html>
