@@ -1,0 +1,20 @@
+[
+  {
+    "Promoter_ID": "PMT001",
+    "Promoter_Name_AR": "ريم خالد",
+    "Promoter_Name_EN": "Reem Khalid",
+    "Linked_Sales_Rep_ID": "SR001",
+    "Phone_Number": "+966567890123",
+    "Status": "نشط",
+    "Notes": "متخصصة في ترويج الحلويات"
+  },
+  {
+    "Promoter_ID": "PMT002",
+    "Promoter_Name_AR": "سعود فيصل",
+    "Promoter_Name_EN": "Saud Faisal",
+    "Linked_Sales_Rep_ID": "SR002",
+    "Phone_Number": "+966589012345",
+    "Status": "نشط",
+    "Notes": "يعمل بشكل جيد في متاجر المواد الغذائية"
+  }
+]

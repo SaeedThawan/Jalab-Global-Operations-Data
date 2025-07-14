@@ -1,0 +1,29 @@
+[
+  {
+    "Sales_Rep_ID": "SR001",
+    "Sales_Rep_Name_AR": "أحمد علي",
+    "Sales_Rep_Name_EN": "Ahmed Ali",
+    "Email": "ahmed.ali@example.com",
+    "Phone_Number": "+966501234567",
+    "Status": "نشط",
+    "Joining_Date": "2022-08-01"
+  },
+  {
+    "Sales_Rep_ID": "SR002",
+    "Sales_Rep_Name_AR": "فاطمة محمد",
+    "Sales_Rep_Name_EN": "Fatima Mohammed",
+    "Email": "fatima.mohammed@example.com",
+    "Phone_Number": "+966557654321",
+    "Status": "نشط",
+    "Joining_Date": "2023-01-10"
+  },
+  {
+    "Sales_Rep_ID": "SR003",
+    "Sales_Rep_Name_AR": "خالد ناصر",
+    "Sales_Rep_Name_EN": "Khalid Nasser",
+    "Email": "khalid.nasser@example.com",
+    "Phone_Number": "+966539876543",
+    "Status": "غير نشط",
+    "Joining_Date": "2023-05-15"
+  }
+]

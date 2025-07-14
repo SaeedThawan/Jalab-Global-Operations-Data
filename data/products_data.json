@@ -1,0 +1,41 @@
+[
+  {
+    "SKU": "PROD001",
+    "Product_Name_AR": "شوكولاتة بالحليب",
+    "Product_Name_EN": "Milk Chocolate",
+    "Unit_Barcode": "1234567890123",
+    "Carton_Barcode": "9876543210987",
+    "Units_per_Carton": 24,
+    "Default_Unit_Quantity": 1,
+    "Category": "حلويات",
+    "Current_Stock_Units": 500,
+    "Current_Stock_Cartons": 20,
+    "Minimum_Stock_Level": 50
+  },
+  {
+    "SKU": "PROD002",
+    "Product_Name_AR": "أرز بسمتي فاخر",
+    "Product_Name_EN": "Premium Basmati Rice",
+    "Unit_Barcode": "1122334455667",
+    "Carton_Barcode": "7788990011223",
+    "Units_per_Carton": 10,
+    "Default_Unit_Quantity": 5,
+    "Category": "غذائية",
+    "Current_Stock_Units": 300,
+    "Current_Stock_Cartons": 30,
+    "Minimum_Stock_Level": 30
+  },
+  {
+    "SKU": "PROD003",
+    "Product_Name_AR": "مياه شرب معبأة",
+    "Product_Name_EN": "Bottled Drinking Water",
+    "Unit_Barcode": "5544332211009",
+    "Carton_Barcode": "9988776655443",
+    "Units_per_Carton": 12,
+    "Default_Unit_Quantity": 1,
+    "Category": "مشروبات",
+    "Current_Stock_Units": 1200,
+    "Current_Stock_Cartons": 100,
+    "Minimum_Stock_Level": 100
+  }
+]

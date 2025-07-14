@@ -1,0 +1,44 @@
+[
+  {
+    "Branch_ID": "BR001",
+    "Customer_ID": "CUST001",
+    "Branch_Name_AR": "فرع العميل الأول - الرياض",
+    "Branch_Name_EN": "First Customer Branch - Riyadh",
+    "City": "الرياض",
+    "Region": "الوسطى",
+    "Sales_Rep_ID": "SR001",
+    "Branch_Status": "نشط",
+    "Contact_Person": "سامي العلي",
+    "Contact_Phone": "+966509988776",
+    "Notes": "فرع رئيسي",
+    "Location_Coordinates": "24.7136,46.6753"
+  },
+  {
+    "Branch_ID": "BR002",
+    "Customer_ID": "CUST001",
+    "Branch_Name_AR": "فرع العميل الأول - جدة",
+    "Branch_Name_EN": "First Customer Branch - Jeddah",
+    "City": "جدة",
+    "Region": "الغربية",
+    "Sales_Rep_ID": "SR001",
+    "Branch_Status": "نشط",
+    "Contact_Person": "ليلى أحمد",
+    "Contact_Phone": "+966551122334",
+    "Notes": "",
+    "Location_Coordinates": "21.4858,39.1925"
+  },
+  {
+    "Branch_ID": "BR003",
+    "Customer_ID": "CUST002",
+    "Branch_Name_AR": "فرع العميل الثاني - الدمام",
+    "Branch_Name_EN": "Second Customer Branch - Dammam",
+    "City": "الدمام",
+    "Region": "الشرقية",
+    "Sales_Rep_ID": "SR002",
+    "Branch_Status": "نشط",
+    "Contact_Person": "فهد القحطاني",
+    "Contact_Phone": "+966530011223",
+    "Notes": "يطلب كميات كبيرة من الأرز",
+    "Location_Coordinates": "26.3980,50.1983"
+  }
+]
