@@ -1,0 +1,53 @@
+[
+  {
+    "Customer_ID": "CUST001",
+    "Customer_Name_AR": "الشركة المتحدة للتجارة",
+    "Customer_Name_EN": "United Trading Company",
+    "Customer_Type": "موزع",
+    "Contact_Person": "أحمد الرشيد",
+    "Contact_Phone": "+966501234567",
+    "Email": "ahmed.alrasheed@utc.com",
+    "Address": "طريق الملك فهد، الرياض",
+    "City": "الرياض",
+    "Region": "الوسطى",
+    "Account_Status": "نشط",
+    "Sales_Rep_ID": "SR001",
+    "Last_Visit_Date": "2024-06-15",
+    "Next_Visit_Date": "2024-07-01",
+    "Notes": "عميل كبير، يركز على المنتجات الجديدة."
+  },
+  {
+    "Customer_ID": "CUST002",
+    "Customer_Name_AR": "بقالة الأمانة",
+    "Customer_Name_EN": "Al-Amanah Grocery",
+    "Customer_Type": "تجزئة",
+    "Contact_Person": "فاطمة الزهراء",
+    "Contact_Phone": "+966559876543",
+    "Email": "fatima.zahra@alamana.com",
+    "Address": "شارع الأمير سلطان، جدة",
+    "City": "جدة",
+    "Region": "الغربية",
+    "Account_Status": "نشط",
+    "Sales_Rep_ID": "SR002",
+    "Last_Visit_Date": "2024-06-20",
+    "Next_Visit_Date": "2024-07-05",
+    "Notes": "طلب زيادة كمية الأرز والزيت."
+  },
+  {
+    "Customer_ID": "CUST003",
+    "Customer_Name_AR": "سوبر ماركت النجمة",
+    "Customer_Name_EN": "Al-Najma Supermarket",
+    "Customer_Type": "تجزئة",
+    "Contact_Person": "خالد بن الوليد",
+    "Contact_Phone": "+966531231234",
+    "Email": "khalid@alnajma.com",
+    "Address": "حي الروابي، الدمام",
+    "City": "الدمام",
+    "Region": "الشرقية",
+    "Account_Status": "غير نشط",
+    "Sales_Rep_ID": "SR001",
+    "Last_Visit_Date": "2024-05-01",
+    "Next_Visit_Date": "",
+    "Notes": "يحتاج إلى متابعة بسبب انخفاض المبيعات مؤخراً."
+  }
+]
