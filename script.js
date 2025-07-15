@@ -1,6 +1,6 @@
 // هذا هو رابط الـ API الخاص بك الذي قمت بنشره
 // تأكد من أن هذا الرابط هو نفسه الذي حصلت عليه من نشر Google Apps Script
-const WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbwb7t92o7-KN3JMbRUuefZKFvtNhvI1RxbVw0s9yEu2ytr_qgr8Uae8-en50mZvyz8f/exec';
+const WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbwb7t92o7-KN3JMbRUuefZKFvtNhvI1RxbVw0s9yEu2ytr_qgr8Uae8-en50mZvyz8f/exec'; // *** حدث هذا إذا تغير رابط API الخاص بك ***
 
 document.addEventListener('DOMContentLoaded', async function() {
     // تعيين التاريخ والوقت الحاليين افتراضياً عند تحميل الصفحة
