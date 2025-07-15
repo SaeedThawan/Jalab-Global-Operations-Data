@@ -1,4 +1,5 @@
 // هذا هو رابط الـ API الخاص بك الذي قمت بنشره
+// تأكد من أن هذا الرابط هو نفسه الذي حصلت عليه من نشر Google Apps Script
 const WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbwb7t92o7-KN3JMbRUuefZKFvtNhvI1RxbVw0s9yEu2ytr_qgr8Uae8-en50mZvyz8f/exec';
 
 document.addEventListener('DOMContentLoaded', async function() {
@@ -13,7 +14,7 @@ document.addEventListener('DOMContentLoaded', async function() {
     document.getElementById('visitDate').value = `${year}-${month}-${day}`;
     document.getElementById('visitTime').value = `${hours}:${minutes}`;
 
-    // جلب وملء بيانات العملاء ومندوبي المبيعات عند تحميل الصفحة
+    // جلب وملء بيانات العملاء ومندوبي المبيعات والمنتجات عند تحميل الصفحة
     await fetchAndPopulateDropdowns();
 });
 
@@ -25,8 +26,9 @@ document.getElementById('visitLogForm').addEventListener('submit', async functio
 
     const formData = {
         Visit_ID: `VISIT_${Date.now()}`, // توليد ID فريد للزيارة
-        Customer_ID: document.getElementById('customerId').value, // الآن سيأتي من القائمة المنسدلة
-        Sales_Rep_ID: document.getElementById('salesRepId').value, // الآن سيأتي من القائمة المنسدلة
+        Customer_ID: document.getElementById('customerId').value,
+        Sales_Rep_ID: document.getElementById('salesRepId').value,
+        Product_ID: document.getElementById('productId').value, // إضافة Product_ID
         Visit_Date: document.getElementById('visitDate').value,
         Visit_Time: document.getElementById('visitTime').value,
         Visit_Purpose: document.getElementById('visitPurpose').value,
@@ -102,7 +104,7 @@ async function fetchData(action, targetDropdownId, valueKey, textKey) {
         }
 
         const result = await response.json();
-        
+
         if (result.status === 'success' && Array.isArray(result.data)) {
             populateDropdown(targetDropdownId, result.data, valueKey, textKey);
         } else {
@@ -121,11 +123,12 @@ function populateDropdown(dropdownId, data, valueKey, textKey) {
         console.error(`Dropdown with ID ${dropdownId} not found.`);
         return;
     }
-    dropdown.innerHTML = '<option value="">الرجاء الاختيار...</option>'; // إضافة خيار افتراضي
+    // مسح الخيارات الحالية وإضافة خيار "الرجاء الاختيار..."
+    dropdown.innerHTML = '<option value="">الرجاء الاختيار...</option>';
     data.forEach(item => {
         const option = document.createElement('option');
         option.value = item[valueKey];
-        option.textContent = item[textKey];
+        option.textContent = item[textKey]; // استخدام المفتاح الصحيح للاسم
         dropdown.appendChild(option);
     });
 }
@@ -133,16 +136,13 @@ function populateDropdown(dropdownId, data, valueKey, textKey) {
 // دالة لجلب وملء جميع القوائم المنسدلة المطلوبة
 async function fetchAndPopulateDropdowns() {
     // جلب العملاء وملء قائمة العملاء المنسدلة
-    await fetchData('getCustomers', 'customerId', 'Customer_ID', 'Customer_Name_AR'); // Customer_Name_AR للاسم العربي
+    await fetchData('getCustomers', 'customerId', 'Customer_ID', 'Customer_Name_AR');
 
     // جلب مندوبي المبيعات وملء قائمة المندوبين المنسدلة
-    await fetchData('getSalesReps', 'salesRepId', 'Sales_Rep_ID', 'Sales_Rep_Name_AR'); // Sales_Rep_Name_AR للاسم العربي
-    
-    // يمكنك إضافة المزيد هنا لـ Branches, Products, Promoters إذا أردت
-    // await fetchData('getBranches', 'branchId', 'Branch_ID', 'Branch_Name_AR');
-    // await fetchData('getProducts', 'productId', 'Product_ID', 'Product_Name_AR');
-    // await fetchData('getPromoters', 'promoterId', 'Promoter_ID', 'Promoter_Name_AR');
+    await fetchData('getSalesReps', 'salesRepId', 'Sales_Rep_ID', 'Sales_Rep_Name_AR');
 
+    // جلب المنتجات وملء قائمة المنتجات المنسدلة
+    await fetchData('getProducts', 'productId', 'Product_ID', 'Product_Name_AR');
 }
 
 
